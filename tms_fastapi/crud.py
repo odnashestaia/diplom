@@ -33,3 +33,19 @@ def get_all_user(db: Session):
 
 def get_all_task(db: Session):
     return db.query(models.Task).all()
+
+
+def delete_task(db: Session, task_id: int):
+    task = db.query(models.Task).filter(models.Task.id == task_id).first()
+    if task:
+        db.delete(task)
+        db.commit()
+    return task
+
+
+def delete_user(db: Session, user_id: int):
+    user = db.query(models.User).filter(models.User.id == user_id).first()
+    if user:
+        db.delete(user)
+        db.commit()
+    return user

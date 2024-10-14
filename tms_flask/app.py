@@ -11,7 +11,6 @@ db.init_app(app)
 migrate = Migrate(app, db)
 api = Api(app)
 
-# Ресурсы
 api.add_resource(UserResource, "/users", "/users/<int:user_id>")
 api.add_resource(TaskResource, "/tasks", "/tasks/<int:task_id>")
 api.add_resource(CategoryResource, "/categories", "/categories/<int:category_id>")

@@ -133,3 +133,6 @@ GitHub.sublime-settings
 .history
 .env
 .env
+.venv-django
+.venv-flask
+.venv-fastapi
