@@ -17,7 +17,6 @@ class Task(models.Model):
     due_date = models.DateField()
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     categories = models.ManyToManyField(Category)
-
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
